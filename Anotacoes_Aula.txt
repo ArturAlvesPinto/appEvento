@@ -1,0 +1,54 @@
+______________________________________________________________________
+Aula 01 Springboot
+
+Inicializar projeto SpringBoot{
+	https://start.spring.io/
+	Escolhe (neste caso):
+		Tipo de Projeto (Maven)
+		Liguagem (Java)
+		Versão Spring (1.5.6)
+		Group (eventoapp)
+		Artifact (eventoapp)
+	
+	Escolhe também as dependencias (neste caso):
+		SpringWEB
+		DevTools (Toda vez que salva o projeto ele reinicia o server)
+		Thymeleaf (Template Engine)
+	
+	Gera projeto e extrai na pasta para trabalho
+}
+
+Eclipse project{
+	Import project > Existing Maven Project
+	Navega até o diretório do projeto
+	Finalizar
+	
+	Pacote Projeto SpringBoot{
+		main/java : "models, controlers e classes de configuração do BD e do spring. Aqui já criar uma classe de inicialização do SpringBoot"
+		main/resources : "onde ficam as páginas estáticas (Jquery, CSS, JS . . .)"
+	}
+}
+
+
+______________________________________________________________________
+Aula 02 Springboot
+
+Criando um Controller, um Model e uma View (MVC)
+
+Foi preciso colocar na class principal @ComponentScan({"com.eventoapp.controller"}) par aque o TomCat respondesse corretamente.
+
+@Controller X @RestController{
+
+	O @Controller é uma anotação comum usada para marcar uma classe como Spring MVC Controller, enquanto o @RestController é um controlador especial usado para serviços RESTFull e o equivalente a @Controller + @ResponseBody.
+	O @RestController é relativamente novo, adicionado apenas no Spring 4.0, mas o @Controller é uma anotação bem antiga, existente desde que o Spring começou a oferecer suporte à annotations, oficialmente adicionado na versão Spring 2.5.
+	A anotação @Controller indica que a classe é um “Controller” (dentro do contexto do padrão MVC ele é o ‘C’), enquanto a anotação @RestController indica que a classe é um controller em que os métodos @RequestMapping assumem a semântica @ResponseBody por padrão, ou seja, atendendo à API REST.
+	O @Controller é uma especialização da anotação @Component enquanto o @RestController é uma especialização da anotação @Controller. Na verdade, é um controlador anotado com @Controller e @ResponseBody, como mostrado abaixo.
+}
+
+
+______________________________________________________________________
+Aula 03 Springboot
+
+
+
+
