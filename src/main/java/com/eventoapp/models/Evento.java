@@ -6,18 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 //Criação de uma entidade com @Entity
+
 @Entity
-@Table(name="Evento")
 public class Evento implements Serializable{
 	
 	private static final long serialVersionUID = 1L; // Identifica se a versão do objeto é compatível com a versão da classe que serializou este objetos
 	
 	// Primary Key da table
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO) // Gera ID automaticamente.
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Gera ID automaticamente.
 	private long id;
 		
 	// Atributos da class Evento
@@ -26,7 +25,7 @@ public class Evento implements Serializable{
 	private String data;
 	private String horario;
 	
-
+	
 	public long getId() {
 		return id;
 	}
