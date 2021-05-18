@@ -5,38 +5,56 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.2.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.eventoapp</groupId>
 	<artifactId>evento</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>evento</name>
-	<description>Demo project for Spring Boot</description>
+	<description>CRUD para uma aplicacao de cadastro de eventos</description>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
+			
+		<!-- SpringBoot Starter Thymeleaf -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		
+		<!-- SpringBoot Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+		
+		<!-- SpringBoot Starter Web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!--  Dependencias para utilização do banco de dados MySQL -->
+		<!-- MySQL -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
+		
+		<!-- JPA -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>1.5.10.RELEASE</version>
 		</dependency>
+		<!-- -->
+		
 		
 		<!--  Necessário colocar caso a versão do spring seja 2.0 -->
 		<dependency>
@@ -45,20 +63,25 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- -->
-
-		<!--  Dependencias para utilização do banco de dados MySQL -->
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.40</version>
-			<scope>compile</scope>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
 		</dependency>
-		<!-- -->
+		
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>8.0.1</version>
+			<scope>provided</scope>
+		</dependency>
 		
 	</dependencies>
 
